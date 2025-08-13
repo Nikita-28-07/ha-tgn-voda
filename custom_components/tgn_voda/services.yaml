@@ -1,0 +1,25 @@
+submit_readings:
+  name: Submit meter readings
+  description: Передать показания для выбранного ЛС
+  fields:
+    readings:
+      required: true
+      example:
+        "123456": 600
+      selector:
+        object:
+
+get_history:
+  name: Get meter history
+  description: Получить историю показаний за период (событие tgn_voda_history)
+  fields:
+    date_from:
+      required: true
+      example: "01.07.2025"
+      selector:
+        text:
+    date_to:
+      required: true
+      example: "31.08.2025"
+      selector:
+        text:

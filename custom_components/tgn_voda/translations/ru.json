@@ -1,0 +1,31 @@
+{
+  "title": "TGN Voda",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Подключение к TGN Voda",
+        "description": "Введите данные для входа в личный кабинет",
+        "data": {
+          "login": "Логин (email)",
+          "password": "Пароль",
+          "account_id": "Номер лицевого счета",
+          "verify_ssl": "Проверять SSL-сертификат",
+          "ca_bundle": "Путь к CA bundle (опционально)",
+          "scan_interval": "Интервал обновления (сек)"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "options": {
+        "title": "Настройки TGN Voda",
+        "data": {
+          "verify_ssl": "Проверять SSL-сертификат",
+          "ca_bundle": "Путь к CA bundle (опционально)",
+          "scan_interval": "Интервал обновления (сек)"
+        }
+      }
+    }
+  }
+}
