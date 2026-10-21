@@ -1,6 +1,6 @@
 [project]
 name = "ha-tgn-voda"
-version = "0.4.0"
+version = "0.2.0"
 description = "Home Assistant integration for the TGN Voda water utility portal"
 readme = "README.md"
 license = "MIT"

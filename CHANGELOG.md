@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 — 2026-10-21
 
 - Configured pytest to import the integration from the repository root in Linux CI.
 - Documented all service events, meter information, options, and diagnostics; added a meter-information automation example.
@@ -20,11 +20,3 @@
 - Redacted account and meter identifiers from diagnostics.
 - Added reconfiguration, localization, and validation workflows.
 - Prevented duplicate account entries from merging legacy account devices.
-
-## 0.4.0
-
-- Added coordinator-based polling and typed config entry runtime data.
-- Added meter device metadata and services that can target a selected account or meter.
-- Added diagnostics with sensitive data redaction.
-- Added bounded retries for safe API reads and clearer connection/authentication errors.
-- Added reauthentication, reconfiguration, and options flows.
