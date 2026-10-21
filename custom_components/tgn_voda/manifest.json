@@ -1,19 +1,14 @@
 {
   "domain": "tgn_voda",
   "name": "TGN Voda",
-  "version": "0.1.0",
-  "documentation": "https://github.com/nikita2807/ha-tgn-voda",
-  "requirements": [
-    "requests>=2.32.0",
-    "beautifulsoup4>=4.12.3",
-    "certifi>=2024.7.4"
-  ],
-  "codeowners": [
-    "@nikita2807"
-  ],
+  "codeowners": ["@Nikita-28-07"],
+  "config_flow": true,
+  "documentation": "https://github.com/Nikita-28-07/ha-tgn-voda",
   "iot_class": "cloud_polling",
-  "loggers": [
-    "custom_components.tgn_voda"
+  "issue_tracker": "https://github.com/Nikita-28-07/ha-tgn-voda/issues",
+  "loggers": ["custom_components.tgn_voda"],
+  "requirements": [
+    "beautifulsoup4>=4.12.3"
   ],
-  "config_flow": true
+  "version": "0.4.0"
 }

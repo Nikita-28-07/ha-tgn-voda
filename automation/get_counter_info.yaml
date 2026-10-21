@@ -1,0 +1,10 @@
+alias: Get TGN Voda meter information
+description: Request meter information using a helper button; results arrive in tgn_voda_counter_info.
+triggers:
+  - trigger: state
+    entity_id: input_button.get_water_meter_info
+actions:
+  - action: tgn_voda.get_counter_info
+    data:
+      device_id: "DEVICE_ID_METER"
+mode: single

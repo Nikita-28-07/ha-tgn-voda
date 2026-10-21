@@ -1,0 +1,12 @@
+alias: Submit TGN Voda meter reading
+description: Submit the value stored in an input_number when the helper button is pressed.
+triggers:
+  - trigger: state
+    entity_id: input_button.submit_water_reading
+actions:
+  - action: tgn_voda.submit_readings
+    data:
+      device_id: "DEVICE_ID_ACCOUNT"
+      readings:
+        "484441": "{{ states('input_number.water_meter_484441') | float }}"
+mode: single

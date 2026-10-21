@@ -1,8 +1,6 @@
 {
   "name": "TGN Voda",
   "render_readme": true,
-  "domains": [
-    "tgn_voda"
-  ],
-  "country": "RU"
+  "country": "RU",
+  "homeassistant": "2026.8.0"
 }

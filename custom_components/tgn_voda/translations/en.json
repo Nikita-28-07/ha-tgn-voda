@@ -1,0 +1,126 @@
+{
+  "title": "TGN Voda",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to TGN Voda",
+        "description": "Enter your personal account credentials.",
+        "data": {
+          "login": "Login",
+          "password": "Password",
+          "account_id": "Account number",
+          "base_url": "Base URL",
+          "verify_ssl": "Verify SSL certificate",
+          "ca_bundle": "CA bundle path (optional)",
+          "scan_interval": "Update interval (seconds)"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Update login credentials",
+        "description": "Check your login and enter the current password.",
+        "data": {
+          "login": "Login",
+          "password": "Password"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure TGN Voda",
+        "description": "Update account credentials and connection settings.",
+        "data": {
+          "login": "Login",
+          "password": "Password",
+          "account_id": "Account number",
+          "base_url": "Base URL",
+          "verify_ssl": "Verify SSL certificate",
+          "ca_bundle": "CA bundle path (optional)",
+          "scan_interval": "Update interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the portal. Check the URL and SSL settings.",
+      "invalid_auth": "Unable to log in. Check your login and password.",
+      "unknown": "An unexpected error occurred. Check the Home Assistant log.",
+      "already_configured": "This account is already configured. Choose another account."
+    },
+    "abort": {
+      "already_configured": "This account is already configured.",
+      "reauth_successful": "Login credentials updated.",
+      "reauth_failed": "Unable to update login credentials.",
+      "reconfigure_successful": "Settings updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "TGN Voda settings",
+        "data": {
+          "base_url": "Base URL",
+          "verify_ssl": "Verify SSL certificate",
+          "ca_bundle": "CA bundle path (optional)",
+          "scan_interval": "Update interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the portal. Check the URL and SSL settings.",
+      "invalid_auth": "Unable to log in. Check your login and password.",
+      "unknown": "An unexpected error occurred. Check the Home Assistant log."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "to_pay_now": {
+        "name": "Amount due"
+      },
+      "accrued_in_period": {
+        "name": "Accrued this period"
+      },
+      "paid_amount": {
+        "name": "Paid"
+      },
+      "opening_debt_amount": {
+        "name": "Opening debt"
+      },
+      "recalculation": {
+        "name": "Recalculation"
+      },
+      "penalty_accrued_in_period": {
+        "name": "Penalty accrued"
+      },
+      "last_updated": {
+        "name": "Last updated"
+      },
+      "counters_ids": {
+        "name": "Meters"
+      },
+      "last_reading": {
+        "name": "Latest reading"
+      }
+    },
+    "binary_sensor": {
+      "has_debt": {
+        "name": "Debt"
+      }
+    },
+    "button": {
+      "refresh": {
+        "name": "Refresh now"
+      }
+    }
+  },
+  "exceptions": {
+    "service_failed": {
+      "message": "Service {service} failed: {error}"
+    },
+    "account_selection_required": {
+      "message": "Could not select an account. Choose a device or provide entry_id. {error}"
+    },
+    "counter_required": {
+      "message": "Select a meter device or provide counter_id."
+    },
+    "counter_device_mismatch": {
+      "message": "The provided counter_id does not match the selected meter device."
+    }
+  }
+}

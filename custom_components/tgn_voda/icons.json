@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "sensor": {
+      "to_pay_now": {"default": "mdi:cash"},
+      "accrued_in_period": {"default": "mdi:receipt"},
+      "paid_amount": {"default": "mdi:cash-check"},
+      "opening_debt_amount": {"default": "mdi:cash-minus"},
+      "recalculation": {"default": "mdi:calculator"},
+      "penalty_accrued_in_period": {"default": "mdi:alert-circle-outline"},
+      "last_updated": {"default": "mdi:clock-outline"},
+      "counters_ids": {"default": "mdi:counter"},
+      "last_reading": {"default": "mdi:counter"}
+    },
+    "binary_sensor": {
+      "has_debt": {"default": "mdi:alert"}
+    },
+    "button": {
+      "refresh": {"default": "mdi:refresh"}
+    }
+  },
+  "services": {
+    "submit_readings": "mdi:counter",
+    "get_history": "mdi:history",
+    "get_payments_history": "mdi:cash-clock",
+    "get_accruals_history": "mdi:receipt-text-clock",
+    "get_accruals_detalization": "mdi:receipt-text",
+    "get_counter_info": "mdi:information-outline"
+  }
+}

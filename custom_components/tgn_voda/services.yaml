@@ -1,7 +1,18 @@
 submit_readings:
   name: Submit meter readings
-  description: Передать показания для выбранного ЛС
+  description: Submit readings for one or more water meters.
   fields:
+    device_id:
+      required: false
+      description: Account or meter device to use when several accounts are configured.
+      selector:
+        device:
+          integration: tgn_voda
+    entry_id:
+      required: false
+      description: Config entry ID for selecting an account explicitly.
+      selector:
+        text:
     readings:
       required: true
       example:
@@ -11,15 +22,111 @@ submit_readings:
 
 get_history:
   name: Get meter history
-  description: Получить историю показаний за период (событие tgn_voda_history)
+  description: Get meter readings for a date range. Results are fired as tgn_voda_history.
   fields:
+    device_id:
+      required: false
+      selector:
+        device:
+          integration: tgn_voda
+    entry_id:
+      required: false
+      selector:
+        text:
     date_from:
       required: true
-      example: "01.07.2025"
+      example: "01.07.2026"
       selector:
         text:
     date_to:
       required: true
-      example: "31.08.2025"
+      example: "31.07.2026"
+      selector:
+        text:
+
+get_payments_history:
+  name: Get payments history
+  description: Get payments for a date range. Results are fired as tgn_voda_payments.
+  fields:
+    device_id:
+      required: false
+      selector:
+        device:
+          integration: tgn_voda
+    entry_id:
+      required: false
+      selector:
+        text:
+    date_from:
+      required: true
+      example: "01.01.2026"
+      selector:
+        text:
+    date_to:
+      required: true
+      example: "31.12.2026"
+      selector:
+        text:
+
+get_accruals_history:
+  name: Get accruals history
+  description: Get account accruals for a date range. Results are fired as tgn_voda_accruals.
+  fields:
+    device_id:
+      required: false
+      selector:
+        device:
+          integration: tgn_voda
+    entry_id:
+      required: false
+      selector:
+        text:
+    date_from:
+      required: true
+      example: "01.01.2026"
+      selector:
+        text:
+    date_to:
+      required: true
+      example: "31.12.2026"
+      selector:
+        text:
+
+get_accruals_detalization:
+  name: Get accrual details
+  description: Get line items for a billing month. Results are fired as tgn_voda_accruals_detalization.
+  fields:
+    device_id:
+      required: false
+      selector:
+        device:
+          integration: tgn_voda
+    entry_id:
+      required: false
+      selector:
+        text:
+    month:
+      required: true
+      example: "01.10.2026"
+      selector:
+        text:
+
+get_counter_info:
+  name: Get counter info
+  description: Get meter metadata. Select the meter device or provide its counter ID. Results are fired as tgn_voda_counter_info.
+  fields:
+    device_id:
+      required: false
+      description: Selecting a meter device fills in its counter ID automatically.
+      selector:
+        device:
+          integration: tgn_voda
+    entry_id:
+      required: false
+      selector:
+        text:
+    counter_id:
+      required: false
+      example: "484441"
       selector:
         text:

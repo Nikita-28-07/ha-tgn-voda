@@ -1,0 +1,13 @@
+{
+  "login": "YOUR_LOGIN",
+  "password": "YOUR_PASSWORD",
+  "account_id": "YOUR_ACCOUNT_NUMBER",
+  "counter_id": "YOUR_COUNTER_ID",
+  "base_url": "https://lk.tgnvoda.ru",
+  "verify_ssl": true,
+  "date_from": "01.07.2025",
+  "date_to": "31.08.2025",
+  "accruals_month": "01.10.2026",
+  "allow_submit_readings": false,
+  "readings": {}
+}

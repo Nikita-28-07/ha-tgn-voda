@@ -4,28 +4,123 @@
     "step": {
       "user": {
         "title": "Подключение к TGN Voda",
-        "description": "Введите данные для входа в личный кабинет",
+        "description": "Введите данные для входа в личный кабинет.",
         "data": {
           "login": "Логин (email)",
           "password": "Пароль",
-          "account_id": "Номер лицевого счета",
+          "account_id": "Номер лицевого счёта",
+          "base_url": "Базовый URL",
           "verify_ssl": "Проверять SSL-сертификат",
-          "ca_bundle": "Путь к CA bundle (опционально)",
-          "scan_interval": "Интервал обновления (сек)"
+          "ca_bundle": "Путь к CA bundle (необязательно)",
+          "scan_interval": "Интервал обновления (секунды)"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Обновить данные входа",
+        "description": "Проверьте логин и введите актуальный пароль.",
+        "data": {
+          "login": "Логин",
+          "password": "Пароль"
+        }
+      },
+      "reconfigure": {
+        "title": "Перенастроить TGN Voda",
+        "description": "Измените данные аккаунта и параметры подключения.",
+        "data": {
+          "login": "Логин",
+          "password": "Пароль",
+          "account_id": "Номер лицевого счёта",
+          "base_url": "Базовый URL",
+          "verify_ssl": "Проверять SSL-сертификат",
+          "ca_bundle": "Путь к CA bundle (необязательно)",
+          "scan_interval": "Интервал обновления (секунды)"
         }
       }
+    },
+    "error": {
+      "cannot_connect": "Не удалось подключиться к порталу. Проверьте URL и SSL.",
+      "invalid_auth": "Не удалось войти. Проверьте логин и пароль.",
+      "unknown": "Произошла непредвиденная ошибка. Проверьте журнал Home Assistant.",
+      "already_configured": "Этот лицевой счёт уже настроен. Укажите другой счёт."
+    },
+    "abort": {
+      "already_configured": "Этот лицевой счёт уже настроен.",
+      "reauth_successful": "Данные входа обновлены.",
+      "reauth_failed": "Не удалось обновить данные входа.",
+      "reconfigure_successful": "Настройки обновлены."
     }
   },
   "options": {
     "step": {
-      "options": {
+      "init": {
         "title": "Настройки TGN Voda",
         "data": {
+          "base_url": "Базовый URL",
           "verify_ssl": "Проверять SSL-сертификат",
-          "ca_bundle": "Путь к CA bundle (опционально)",
-          "scan_interval": "Интервал обновления (сек)"
+          "ca_bundle": "Путь к CA bundle (необязательно)",
+          "scan_interval": "Интервал обновления (секунды)"
         }
       }
+    },
+    "error": {
+      "cannot_connect": "Не удалось подключиться к порталу. Проверьте URL и SSL.",
+      "invalid_auth": "Не удалось войти. Проверьте логин и пароль.",
+      "unknown": "Произошла непредвиденная ошибка. Проверьте журнал Home Assistant."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "to_pay_now": {
+        "name": "К оплате"
+      },
+      "accrued_in_period": {
+        "name": "Начислено за период"
+      },
+      "paid_amount": {
+        "name": "Оплачено"
+      },
+      "opening_debt_amount": {
+        "name": "Задолженность на начало периода"
+      },
+      "recalculation": {
+        "name": "Перерасчёт"
+      },
+      "penalty_accrued_in_period": {
+        "name": "Начислено пени"
+      },
+      "last_updated": {
+        "name": "Последнее обновление"
+      },
+      "counters_ids": {
+        "name": "Счётчики"
+      },
+      "last_reading": {
+        "name": "Последнее показание"
+      }
+    },
+    "binary_sensor": {
+      "has_debt": {
+        "name": "Есть задолженность"
+      }
+    },
+    "button": {
+      "refresh": {
+        "name": "Обновить сейчас"
+      }
+    }
+  },
+  "exceptions": {
+    "service_failed": {
+      "message": "Сервис {service} завершился с ошибкой: {error}"
+    },
+    "account_selection_required": {
+      "message": "Не удалось выбрать лицевой счёт. Укажите устройство или entry_id. {error}"
+    },
+    "counter_required": {
+      "message": "Выберите устройство счётчика или укажите counter_id."
+    },
+    "counter_device_mismatch": {
+      "message": "Указанный counter_id не соответствует выбранному устройству счётчика."
     }
   }
 }

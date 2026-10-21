@@ -1,0 +1,12 @@
+# Local credentials for live portal tests
+tests/live_config.json
+
+# Local work plan
+/PLAN.md
+
+# Python test artifacts and virtual environments
+.venv*/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]

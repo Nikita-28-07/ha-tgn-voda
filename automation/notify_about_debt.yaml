@@ -1,0 +1,13 @@
+alias: Notify about TGN Voda debt
+description: Create a persistent notification when the account reports a debt.
+triggers:
+  - trigger: state
+    entity_id: binary_sensor.tgn_voda_has_debt
+    to: "on"
+actions:
+  - action: persistent_notification.create
+    data:
+      title: TGN Voda
+      message: >-
+        К оплате: {{ states('sensor.tgn_voda_to_pay_now') }} ₽
+mode: single
